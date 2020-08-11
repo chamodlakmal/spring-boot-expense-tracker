@@ -1,9 +1,11 @@
 package com.chamiviews.expensetracker.service;
 
-import antlr.collections.List;
+import java.util.List;
+
+import com.chamiviews.expensetracker.model.Expense;
 
 public interface ExpenseService {
 	
-	List findAll();
+	List<Expense> findAll();
 
 }
