@@ -7,5 +7,7 @@ import com.chamiviews.expensetracker.model.Expense;
 public interface ExpenseService {
 	
 	List<Expense> findAll();
+	
+	Expense save(Expense expense);
 
 }
