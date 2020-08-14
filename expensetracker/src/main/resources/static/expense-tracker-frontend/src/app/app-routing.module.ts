@@ -6,6 +6,7 @@ import { ListExpenseComponent } from './components/list-expense/list-expense.com
 const routes: Routes = [
   {path:'',redirectTo:'/expenses',pathMatch:'full'},
   {path:'expenses',component:ListExpenseComponent},
+  {path:'editexpense/:id',component:AddExpenseComponent},
   {path:'addExpense',component:AddExpenseComponent},
 ];
 
