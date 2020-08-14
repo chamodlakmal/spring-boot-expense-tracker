@@ -15,7 +15,7 @@ export class AddExpenseComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  saveExense(){
+  saveExpense(){
     this._expenseService.saveExpense(this.expense).subscribe(data=>{
       console.log('response',data);
       this._router.navigateByUrl('/expenses');
