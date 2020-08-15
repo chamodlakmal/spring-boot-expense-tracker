@@ -15,4 +15,8 @@ export class ListExpenseComponent implements OnInit {
     this._expenseService.getExpenses().subscribe(data=>this.expenses=data)
   }
 
+  deleteexpense(id:number){
+    this._expenseService.deleteExpense(id)
+  }
+
 }

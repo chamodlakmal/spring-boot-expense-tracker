@@ -29,5 +29,11 @@ export class ExpenseService {
     )
   }
 
+  deleteExpense(id:number):Observable<Expense>{
+    return this._httpClient.delete<Expense>(`${this.getUrl}/${id}`).pipe(
+      map(response=>response)
+    )
+  }
+
 }
 
