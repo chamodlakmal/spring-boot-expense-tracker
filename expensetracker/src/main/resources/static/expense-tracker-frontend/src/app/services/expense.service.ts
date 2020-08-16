@@ -29,10 +29,8 @@ export class ExpenseService {
     )
   }
 
-  deleteExpense(id:number):Observable<Expense>{
-    return this._httpClient.delete<Expense>(`${this.getUrl}/${id}`).pipe(
-      map(response=>response)
-    )
+  deleteExpense(id:number):Observable<any>{
+    return this._httpClient.delete(`${this.getUrl}/${id}`,{responseType:'text'});
   }
 
 }
