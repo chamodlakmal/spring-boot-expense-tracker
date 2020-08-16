@@ -1,5 +1,9 @@
 <a routerLink="/addExpense">Add Expense</a>
 <input type="text" [(ngModel)]="filters.keyword" name="keyword" (input)="listExpenses()"/>
+<select (change)="listExpenses()" name="sortBy" [(ngModel)]="filters.sortBy">
+    <option>Name</option>
+    <option>Amount</option>
+</select>
 <div *ngFor="let expense of expenses">
     <h3>{{expense.expense}}</h3>
     <h3>Rs.{{expense.amount}}</h3>
